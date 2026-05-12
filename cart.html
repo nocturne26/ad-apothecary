@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cart | AD Apothecary</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>AD Apothecary</h1>
+
+    <button class="menu-toggle">☰ Menu</button>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cart-section">
+  <h2>Your Cart Request</h2>
+
+  <div class="cart-note">
+  <h3>How Order Requests Work</h3>
+
+  <p>
+    This is not a direct checkout page.
+  </p>
+
+  <p>
+    Your cart will be submitted to AD Apothecary as an order request.
+    Availability, shipping or pickup, and payment details will be confirmed before your order is finalized.
+  </p>
+
+  <p>
+    Product totals shown do not include shipping costs. We will contact you with final amount due and to accept payment.
+  </p>
+
+  <p>
+    Payment types accepted are Venmo or Paypal.
+  </p>
+</div>
+
+  <div class="cart-layout">
+    <div id="cart-items"></div>
+
+    <form class="request-form" action="https://formspree.io/f/xjgllwez" method="POST">
+  <input type="text" name="name" placeholder="Name" required>
+
+  <input type="email" name="email" placeholder="Email" required>
+
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+
+  <input type="address" name="address" placeholder="Street Address" required>
+
+  <div class="location-row">
+
+  <input type="text" name="city" placeholder="City" required>
+
+  <input type="text" name="state" placeholder="State" required>
+
+  <input type="text" name="zip" placeholder="Zip Code" required>
+
+</div>
+
+  <textarea name="notes" placeholder="Pickup, shipping, or order notes"></textarea>
+
+  <input type="hidden" name="cart" id="cart-summary">
+
+  <button type="submit" class="shop-button">
+    Submit Order Request
+  </button>
+</form>
+  </div>
+
+  <button id="clear-cart" class="shop-button">
+    Clear Cart
+  </button>
+
+  <p id="form-message"></p>
+
+</section>
+  </main>
+
+  <script src="Javascript/cart-page.js"></script>
+  <script src="Javascript/menu.js"></script>
+
+</body>
+</html>
